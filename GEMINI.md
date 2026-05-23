@@ -26,6 +26,7 @@ Welcome to the Aawej Pathan Portfolio codebase. This document outlines the proje
 ## 🎨 Design System & Aesthetics
 
 - **Inspiration**: `steipete.me` (Peter Steinberger).
+- **Design Tokens**: All colors, fonts, spacing values, and borders are formally specified in [DESIGN.md](file:///c:/Users/Aawej/Documents/aawej/DESIGN.md) in the project root. Future agents **must** reference [DESIGN.md](file:///c:/Users/Aawej/Documents/aawej/DESIGN.md) before writing CSS to ensure design token consistency.
 - **Core Aesthetic**: Minimalist technical dark/light mode using `JetBrains Mono` as the primary monospaced font.
 - **Accents**: Warm orange (`#f6ad55` in dark mode, `#dd6b20` in light mode).
 - **Active Navigation Indicator**: Wavy orange underlines under active links (`Posts`, `About`).
