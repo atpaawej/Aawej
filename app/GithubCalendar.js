@@ -21,7 +21,7 @@ export default function LiveGithubCalendar() {
   return (
     <div className="github-activity-wrapper">
       <GitHubCalendar 
-        username="pathanaawej0-dot" 
+        username="atpaawej" 
         hideColorLegend={false}
         hideMonthLabels={false}
         blockSize={12}

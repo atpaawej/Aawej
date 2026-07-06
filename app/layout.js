@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://github.com/pathanaawej0-dot',
+    url: 'https://github.com/atpaawej',
     title: 'Aawej Pathan | AI Engineer & Founder',
     description: 'Portfolio and technical blog of Aawej Pathan, a 16-year-old AI Engineer and Entrepreneur.',
     siteName: 'Aawej Pathan Portfolio',
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
               'url': 'https://aawej.in',
               'sameAs': [
                 'https://x.com/AawejPathan786',
-                'https://github.com/pathanaawej0-dot',
+                'https://github.com/atpaawej',
                 'https://www.instagram.com/aawej_19/',
               ],
               'email': 'pathanaawej0@gmail.com',

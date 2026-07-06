@@ -90,11 +90,11 @@ export default function Home() {
             </div>
             <ArrowUpRight className="arrow-link" />
           </a>
-          <a href="https://github.com/pathanaawej0-dot" target="_blank" rel="noopener noreferrer" className="social-card">
+          <a href="https://github.com/atpaawej" target="_blank" rel="noopener noreferrer" className="social-card">
             <GithubIcon />
             <div className="social-info">
               <span className="social-name">GitHub</span>
-              <span className="social-handle">pathanaawej0-dot</span>
+              <span className="social-handle">atpaawej</span>
             </div>
             <ArrowUpRight className="arrow-link" />
           </a>

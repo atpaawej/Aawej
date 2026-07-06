@@ -8,7 +8,7 @@ Inspired by the clean, tech-centric, monospaced layout of `steipete.me`, the sit
 
 1. **Next.js 16 & App Router**: Leverages Server-Side Rendering (SSR) and Static Site Generation (SSG) for fast loading speeds and SEO indexability.
 2. **Monospaced Technical Design**: Minimalist dark/light theme utilizing `JetBrains Mono`, clean borders, and wavy link styles.
-3. **Live GitHub Contributions Calendar**: Directly fetches and renders live contribution logs for GitHub profile [pathanaawej0-dot](https://github.com/pathanaawej0-dot) using `react-github-calendar`.
+3. **Live GitHub Contributions Calendar**: Directly fetches and renders live contribution logs for GitHub profile [atpaawej](https://github.com/atpaawej) using `react-github-calendar`.
 4. **100% Hack-Proof Blog**: Uses static Markdown (`.md`) files stored in the codebase. There is no database or admin dashboard on the server, eliminating any database breach or SQL injection risks.
 5. **SEO & Sitemaps**: Pre-configured meta tags, Twitter cards for X, structured JSON-LD data for Google Rich Snippets, and a dynamically built `sitemap.xml`.
 

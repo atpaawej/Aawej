@@ -9,7 +9,7 @@ Welcome to the Aawej Pathan Portfolio codebase. This document outlines the proje
 - **Framework**: Next.js 16 (App Router, JavaScript)
 - **Styling**: Vanilla CSS (`app/globals.css`). **Avoid adding utility CSS frameworks like Tailwind unless requested.**
 - **Blogging**: Zero-database, file-based blog system.
-- **Dynamic Features**: `react-github-calendar` to fetch live contributions for GitHub profile `pathanaawej0-dot`.
+- **Dynamic Features**: `react-github-calendar` to fetch live contributions for GitHub profile `atpaawej`.
 
 ### Dynamic Route Requirements (Next.js 16/React 19)
 - **Awaiting Params**: All dynamic page files (e.g., `app/posts/[slug]/page.js`) **must await the `params` prop** before destructuring.
