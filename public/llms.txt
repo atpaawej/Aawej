@@ -1,0 +1,41 @@
+# Aawej Pathan
+
+> Hey, I'm Aawej — I build AI stuff that excites me. I'm a 16-year-old AI engineer and technical builder. My main project is AgentOnboard, an identity layer that gives every AI agent its own ID card. I also built RankGeo, and I ship everything in public on GitHub. This site is my portfolio and writing home.
+
+I started coding because I wanted to build things that feel alive. When LLMs got good, I realized anyone could build production-grade AI systems from a bedroom — so I stopped writing simple scripts and started designing agent architectures and the tooling around them. I build in the open and document what I learn.
+
+Important notes:
+
+- AgentOnboard is a separate live product at https://ao.aawej.in, not part of this portfolio codebase.
+- The whole idea behind AgentOnboard: agents should have their own identity, not borrow yours. You save a static key once with `aon save`, agents exchange it for short-lived session tokens, and services verify through AgentOnboard — they never see a static key.
+- This site is my portfolio and blog, built with Next.js. Here's where you'll find my work, my writing, and how to reach me.
+
+## Work
+
+- [Work](https://aawej.in/work): Everything I'm building — AgentOnboard, RankGeo, openwts, and Developer.
+- [AgentOnboard](https://aawej.in/work/agentonboard): Identity for AI agents. My main build.
+- [RankGeo](https://aawej.in/work/rankgeo): Generative Engine Optimization — how ChatGPT, Claude, and Gemini see your brand.
+- [openwts](https://aawej.in/work/openwts): A CLI that wraps git worktrees around AI coding agents so every task gets its own clean room.
+- [Developer](https://aawej.in/work/developer): My Claude Code-style terminal agent with an Ink TUI, wired to 500+ LLMs.
+
+## Writing
+
+- [Building AgentOnboard: Giving Every AI Agent Its Own Identity](https://aawej.in/posts/building-agentonboard-identity-layer): The story of why agents need their own identity and how I built AgentOnboard to fix it.
+
+## About
+
+- [About](https://aawej.in/about): My story — how I got into building agents and where I'm headed.
+- [Connect](https://aawej.in/connect): How to reach me.
+
+## Products
+
+- [AgentOnboard](https://ao.aawej.in): Universal identity for AI agents.
+- [AgentOnboard Partners](https://partners.ao.aawej.in): SDK for API providers so any agent can authenticate instantly.
+- [RankGeo](https://rankgeo.aawej.in): Measure and improve how AI engines perceive your brand.
+
+## Optional
+
+- [My GitHub](https://github.com/atpaawej): All my code and commits.
+- [X (Twitter)](https://x.com/AawejPathan786): My updates.
+- [Instagram](https://www.instagram.com/aawej_19/): Me.
+- [Email me](mailto:pathanaawej0@gmail.com): Best way to reach me.
