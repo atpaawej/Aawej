@@ -1,14 +1,12 @@
-import { getSortedPostsData } from '@/lib/posts';
+import { PROJECTS } from '@/app/projects';
 
 export default function sitemap() {
   const baseUrl = 'https://aawej.in';
-  
-  // Get all dynamic blog post paths
-  const posts = getSortedPostsData();
-  const postUrls = posts.map((post) => ({
-    url: `${baseUrl}/posts/${post.id}`,
-    lastModified: new Date(post.date),
-    changeFrequency: 'monthly',
+
+  const projectUrls = PROJECTS.map((project) => ({
+    url: `${baseUrl}/work/${project.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
     priority: 0.7,
   }));
 
@@ -20,11 +18,29 @@ export default function sitemap() {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/work`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/connect`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
       url: `${baseUrl}/posts`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-    ...postUrls,
+    ...projectUrls,
   ];
 }

@@ -4,7 +4,8 @@ import PostsList from './PostsList';
 
 export const metadata = {
   title: 'Writing | Aawej Pathan',
-  description: 'Thoughts on artificial intelligence, software prototyping, and engineering.',
+  description:
+    'Writing on agents, AI tooling, and building in public by Aawej Pathan.',
 };
 
 export default function PostsPage() {

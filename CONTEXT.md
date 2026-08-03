@@ -1,6 +1,6 @@
 # Aawej Pathan Portfolio
 
-A professional, high-end minimalist tech portfolio for Aawej Pathan, a 16-year-old AI Engineer and Entrepreneur, showcasing his projects, startup initiatives, coding accomplishments, and interactive AI showcases.
+A Cohere-inspired portfolio for Aawej Pathan, an AI engineer and technical builder shipping AgentOnboard and RankGeo — story-led home (hook → currently building → proof → connect), a full /work hub with per-project detail pages, an About story page, a Connect page with mailto contact form, and a writing section currently showing an empty state.
 
 ## Language
 
