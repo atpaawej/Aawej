@@ -21,13 +21,13 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: postData.title,
       description: postData.summary,
-      images: [{ url: '/aawej image.jpg' }],
+      images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Aawej Pathan — AI Engineer & Builder' }],
     },
     twitter: {
       card: 'summary_large_image',
       title: postData.title,
       description: postData.summary,
-      images: ['/aawej image.jpg'],
+      images: ['/og.png'],
     },
   };
 }

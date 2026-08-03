@@ -44,14 +44,14 @@ export const metadata = {
     description:
       'Technical builder shipping AgentOnboard and RankGeo. Portfolio and writing by Aawej Pathan.',
     siteName: 'Aawej Pathan',
-    images: [{ url: '/aawej image.jpg' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Aawej Pathan — AI Engineer & Builder. Building things that excite me.' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Aawej Pathan | AI Engineer & Builder',
     description:
       'Technical builder shipping AgentOnboard and RankGeo. Portfolio and writing by Aawej Pathan.',
-    images: ['/aawej image.jpg'],
+    images: ['/og.png'],
     creator: '@AawejPathan786',
   },
 };
