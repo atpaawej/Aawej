@@ -1,37 +1,28 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Sun, Moon } from 'lucide-react';
+import { useThemeSnapshot, applyStoredTheme } from './useTheme';
 
 export default function Header() {
   const pathname = usePathname();
-  const [darkMode, setDarkMode] = useState(true);
+  const isDark = useThemeSnapshot();
+  // Lazily seed from localStorage; harmless and avoids layout shift before hydration
+  const [initialized, setInitialized] = useState(false);
 
-  // Initialize and sync light/dark mode
-  useEffect(() => {
-    const isLight = localStorage.getItem('theme') === 'light';
-    if (isLight) {
-      setDarkMode(false);
-      document.documentElement.classList.add('light-mode');
-    } else {
-      setDarkMode(true);
-      document.documentElement.classList.remove('light-mode');
-    }
+  // Guard the first render so a stored dark preference applies without flicker
+  if (!initialized && typeof window !== 'undefined') {
+    setInitialized(true);
+    applyStoredTheme();
+  }
+
+  const toggleTheme = useCallback(() => {
+    const next = !document.documentElement.classList.contains('dark-mode');
+    document.documentElement.classList.toggle('dark-mode', next);
+    localStorage.setItem('theme', next ? 'dark' : 'light');
   }, []);
-
-  const toggleTheme = () => {
-    if (darkMode) {
-      document.documentElement.classList.add('light-mode');
-      localStorage.setItem('theme', 'light');
-      setDarkMode(false);
-    } else {
-      document.documentElement.classList.remove('light-mode');
-      localStorage.setItem('theme', 'dark');
-      setDarkMode(true);
-    }
-  };
 
   const isActive = (path) => {
     if (path === '/') {
@@ -48,25 +39,37 @@ export default function Header() {
         </Link>
 
         <nav className="nav-links">
-          <Link 
-            href="/posts" 
+          <Link
+            href="/work"
+            className={`nav-link ${isActive('/work') ? 'active' : ''}`}
+          >
+            Work
+          </Link>
+          <Link
+            href="/posts"
             className={`nav-link ${isActive('/posts') ? 'active' : ''}`}
           >
-            Posts
+            Writing
           </Link>
-          <Link 
-            href="/" 
-            className={`nav-link ${isActive('/') ? 'active' : ''}`}
+          <Link
+            href="/about"
+            className={`nav-link ${isActive('/about') ? 'active' : ''}`}
           >
             About
           </Link>
+          <Link
+            href="/connect"
+            className={`nav-link ${isActive('/connect') ? 'active' : ''}`}
+          >
+            Connect
+          </Link>
 
-          <button 
-            onClick={toggleTheme} 
+          <button
+            onClick={toggleTheme}
             className="theme-toggle-btn"
             aria-label="Toggle theme"
           >
-            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+            {isDark ? <Sun size={16} /> : <Moon size={16} />}
           </button>
         </nav>
       </div>

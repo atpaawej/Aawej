@@ -1,6 +1,18 @@
-import { JetBrains_Mono } from 'next/font/google';
+import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google';
 import Header from './Header';
 import './globals.css';
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+});
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -10,23 +22,35 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata = {
   metadataBase: new URL('https://aawej.in'),
-  title: 'Aawej Pathan | AI Engineer & Founder',
-  description: 'Portfolio and technical blog of Aawej Pathan, a 16-year-old AI Engineer and Entrepreneur building autonomous systems.',
-  keywords: ['Aawej Pathan', 'AI Engineer', 'Developer', 'Portfolio', 'Blog', 'Agentic Workflows', 'AI Builder'],
+  title: 'Aawej Pathan | AI Engineer & Builder',
+  description:
+    'Technical builder shipping AgentOnboard and RankGeo. Portfolio and writing by Aawej Pathan.',
+  keywords: [
+    'Aawej Pathan',
+    'AI Engineer',
+    'AgentOnboard',
+    'RankGeo',
+    'Developer',
+    'Portfolio',
+    'Blog',
+    'Agentic Systems',
+  ],
   authors: [{ name: 'Aawej Pathan' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://github.com/atpaawej',
-    title: 'Aawej Pathan | AI Engineer & Founder',
-    description: 'Portfolio and technical blog of Aawej Pathan, a 16-year-old AI Engineer and Entrepreneur.',
-    siteName: 'Aawej Pathan Portfolio',
+    url: 'https://aawej.in',
+    title: 'Aawej Pathan | AI Engineer & Builder',
+    description:
+      'Technical builder shipping AgentOnboard and RankGeo. Portfolio and writing by Aawej Pathan.',
+    siteName: 'Aawej Pathan',
     images: [{ url: '/aawej image.jpg' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aawej Pathan | AI Engineer & Founder',
-    description: 'Portfolio and technical blog of Aawej Pathan, a 16-year-old AI Engineer and Entrepreneur.',
+    title: 'Aawej Pathan | AI Engineer & Builder',
+    description:
+      'Technical builder shipping AgentOnboard and RankGeo. Portfolio and writing by Aawej Pathan.',
     images: ['/aawej image.jpg'],
     creator: '@AawejPathan786',
   },
@@ -34,7 +58,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={jetbrainsMono.variable}>
+    <html
+      lang="en"
+      className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+    >
       <head>
         <script
           type="application/ld+json"
@@ -42,20 +69,20 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Person',
-              'name': 'Aawej Pathan',
-              'jobTitle': 'AI Engineer & Entrepreneur',
-              'url': 'https://aawej.in',
-              'sameAs': [
+              name: 'Aawej Pathan',
+              jobTitle: 'AI Engineer & Builder',
+              url: 'https://aawej.in',
+              sameAs: [
                 'https://x.com/AawejPathan786',
                 'https://github.com/atpaawej',
                 'https://www.instagram.com/aawej_19/',
               ],
-              'email': 'pathanaawej0@gmail.com',
-              'knowsAbout': [
+              email: 'pathanaawej0@gmail.com',
+              knowsAbout: [
                 'Artificial Intelligence',
-                'Machine Learning',
+                'Agent Identity',
+                'Generative Engine Optimization',
                 'Software Engineering',
-                'Large Language Models',
                 'Agentic Systems',
               ],
             }),
@@ -69,7 +96,8 @@ export default function RootLayout({ children }) {
           <footer className="global-footer">
             <p>&copy; {new Date().getFullYear()} Aawej Pathan. All rights reserved.</p>
             <p className="footer-imprint">
-              Imprint: Aawej Pathan · Email: <a href="mailto:pathanaawej0@gmail.com" style={{ color: 'var(--accent-color)', textDecoration: 'none' }}>pathanaawej0@gmail.com</a>
+              Imprint: Aawej Pathan · Email:{' '}
+              <a href="mailto:pathanaawej0@gmail.com">pathanaawej0@gmail.com</a>
             </p>
           </footer>
         </div>

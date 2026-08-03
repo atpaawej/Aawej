@@ -13,9 +13,9 @@ export default function EmailButton() {
   };
 
   return (
-    <button onClick={handleCopyEmail} className="action-btn email-btn">
+    <button onClick={handleCopyEmail} className="action-btn email-btn" type="button">
       <Mail size={16} />
-      <span>pathanaawej0@gmail.com</span>
+      <span>{copied ? 'Copied to clipboard' : 'pathanaawej0@gmail.com'}</span>
       {copied ? <Check size={16} className="success-icon" /> : <ArrowUpRight size={14} />}
     </button>
   );

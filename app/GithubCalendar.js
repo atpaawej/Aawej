@@ -1,35 +1,36 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useSyncExternalStore } from 'react';
 import { GitHubCalendar } from 'react-github-calendar';
 
+function subscribe(callback) {
+  const observer = new MutationObserver(callback);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  return () => observer.disconnect();
+}
+
+function isDark() {
+  return document.documentElement.classList.contains('dark-mode');
+}
+
+function getServerSnapshot() {
+  return false;
+}
+
 export default function LiveGithubCalendar() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <div className="github-activity-wrapper" style={{ minHeight: '130px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Loading contribution graph...</span>
-      </div>
-    );
-  }
+  const dark = useSyncExternalStore(subscribe, isDark, getServerSnapshot);
 
   return (
     <div className="github-activity-wrapper">
-      <GitHubCalendar 
-        username="atpaawej" 
+      <GitHubCalendar
+        username="atpaawej"
+        colorScheme={dark ? 'dark' : 'light'}
         hideColorLegend={false}
         hideMonthLabels={false}
         blockSize={12}
         blockMargin={4}
         fontSize={12}
-        style={{
-          color: 'var(--text-color)',
-        }}
+        style={{ color: dark ? '#edfce9' : '#212121' }}
       />
     </div>
   );
